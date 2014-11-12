@@ -102,7 +102,7 @@ $app->post('/register', function() use ($app){
 		'password'=>md5($_POST['password']), //md5 is actually bad practice, too easy to decrypt
 		'email'=>$_POST['email'],
 		'website'=>$_POST['website'],
-	)); //json_encode returns a single line perfect for us
+	))."\n"; //json_encode returns a single line perfect for us
 	if(fwrite($user_file,$user) >= 0){
 		fclose($user_file);
 		$app->flash('info', 'User created succesfully');

@@ -17,6 +17,16 @@ _header($user["username"]);
 <div class="row">
 <p><?php echo $user["website"];?></p>
 </div>
+
+<?php if($_SESSION['user']['username'] == $user['username']){
+
+?>
+<div class="row">
+<a href="/profile" class="button">Edit My Profile</a>
+</div>
+<?php
+}
+?>
 </center>
 
 <?php
