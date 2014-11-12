@@ -13,6 +13,20 @@ function _header($title){
 <?php
 }
 
+function banners(){
+	if(isset($_SESSION['slim.flash']['error'])){
+?>
+	<button class="error" disabled><?php echo $_SESSION['slim.flash']['error'];?></button>
+<?php
+	}
+	if(isset($_SESSION['slim.flash']['info'])){
+?>
+
+	<button class="success" disabled><?php echo $_SESSION['slim.flash']['info'];?></button>
+<?php
+	}
+}
+
 function footer(){
 ?>
 </body>

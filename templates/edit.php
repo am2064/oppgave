@@ -2,18 +2,13 @@
 
 require 'layout.php';
 
-_header('Register');
+_header('Update Profile');
 ?>
 
 <center>
-<h1>Registration</h1>
+<h1>Update Profile</h1>
 
-<form action="register" method="post">
-
-<div class="row">
-<label for="username">Username</label></br>
-<input required name="username" type="username">
-</div>
+<form action="profile" method="post">
 
 <div class="row">
 <label for="password">Password</label></br>
